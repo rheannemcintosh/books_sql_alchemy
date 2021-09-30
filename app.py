@@ -33,9 +33,13 @@ def menu():
 
 # Data Cleaning
 
+def add_csv():
+    with open('suggested_books.csv') as csvfile:
+        data = csv.reader(csvfile)
+        for row in data:
+            print(row)
+
 # Loop Runs Program
-
-
 def app():
     app_running = True
     while app_running:
