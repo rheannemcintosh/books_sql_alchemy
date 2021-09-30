@@ -44,6 +44,10 @@ def clean_date(date_str):
     year = int(split_date[2])
     return datetime.date(year, month, day)
 
+def clean_price(price_str):
+    price_float = float(price_str)
+    return int(price_float * 100)
+
 def add_csv():
     with open('suggested_books.csv') as csvfile:
         data = csv.reader(csvfile)
